@@ -39,6 +39,5 @@ sed -i "s/LOGGLY_TAG/$LOGGLY_TAG/" /etc/rsyslog.conf
 
 rm -f /var/run/rsyslogd.pid
 
-# Run RSyslog daemon
-exec /usr/sbin/rsyslogd -n
-
+# Run RSyslog daemon, add any CMD parameters to the command.
+exec /usr/sbin/rsyslogd -n ${@}

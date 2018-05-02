@@ -24,5 +24,4 @@ ADD loggly.crt /etc/rsyslog.d/keys/ca.d/
 EXPOSE 514
 EXPOSE 514/udp
 
-CMD ["/tmp/run.sh"]
-
+ENTRYPOINT ["/tmp/run.sh"]
